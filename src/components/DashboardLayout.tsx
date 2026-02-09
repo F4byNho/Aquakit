@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Outlet, useLocation, useNavigate, useOutletContext } from 'react-router-dom';
+import { Outlet, useLocation, useOutletContext } from 'react-router-dom';
 import { useApp } from '../contexts/AppContext';
 import { Sidebar } from './Sidebar';
 import { AddPondModal } from './AddPondModal';
@@ -18,7 +18,6 @@ export function DashboardLayout() {
     const [activePondId, setActivePondId] = useState<string | null>(null);
     const [isAddPondModalOpen, setIsAddPondModalOpen] = useState(false);
     const location = useLocation();
-    const navigate = useNavigate();
 
     // Auto-select pond logic
     useEffect(() => {
